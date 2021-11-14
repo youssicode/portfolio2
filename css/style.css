@@ -1,4 +1,4 @@
-/* Mobile First */
+/** Mobile First Styling **/
 :root {
   --main-color: #f7f7f7;
   --scnd-color: #8444df;
@@ -12,10 +12,8 @@
   box-sizing: border-box;
 }
 body {
-  width: 100%;
   font-family: "Poppins", sans-serif;
   background-color: var(--main-color);
-  font-size: 1rem;
 }
 /****** Nav Bar *******/
 nav {
@@ -129,7 +127,10 @@ section {
 #home {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  height: 100vh;
+  padding-top: 2 rem;
 }
 #home .my-photo {
   width: 14.5rem;
@@ -139,7 +140,6 @@ section {
 }
 .intro {
   text-align: center;
-  margin-top: 2.8rem;
   padding: 0 0.8rem;
 }
 .intro p:first-child {
@@ -158,7 +158,6 @@ h1 {
   color: #5f6f81;
   letter-spacing: 1px;
   line-height: 1.4rem;
-  padding: 0 1rem;
 }
 .home-contact {
   width: 100%;
@@ -166,7 +165,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
 }
 .resume-btn,
 .sbmt {
@@ -179,7 +178,7 @@ h1 {
   border: none;
   height: 2.7rem;
   line-height: 2.7rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
 .social {
@@ -187,7 +186,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .social div {
   background-color: #fff;
@@ -375,24 +374,27 @@ h5,
   font-size: 0.8rem;
   color: var(--font-color);
 }
-form {
+form {  /* We can use Grid layout here: 1st with 1 column, and 2colums in larger screens */
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+}
+form div input#cntName {
+  margin-bottom: 0.8rem; /* form gap: 0.8rem; does'nt work here */
 }
 form div input {
   width: 100%;
 }
 form input,
 form textarea {
-  height: 3rem;
-  padding-left: 0.8rem;
+  padding: 0.8rem;
   border: 1px solid #ddd;
   font-size: 0.9rem;
   font-weight: 500;
   font-family: "Poppins";
-  margin-bottom: 0.8rem;
   transition: all 0.5s ease;
 }
+
 form textarea {
   resize: none;
   height: 4.5rem;
@@ -514,20 +516,27 @@ footer {
   }
   #home {
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-top: 0;
+  }
+  .home-contact {
+    justify-content: flex-start;
   }
   .intro {
-    width: 535px;
+    width: 46%;
+    text-align: left;
+    margin-left: 6%;
   }
   .project-card img {
     width: 375px;
     height: auto;
     margin-bottom: 0;
   }
-  form div input {
-    width: 49.2%;
+  form div input#cntName {
+    margin-bottom: 0; 
   }
-  form div input:first-child {
-    margin-right: 1%;
+  form div {
+    display: flex;
+    gap: 30px;
   }
 }
