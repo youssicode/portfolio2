@@ -412,7 +412,6 @@ form textarea:focus {
   display: block;
 }
 footer {
-  margin-left: 6.56rem;
   height: 4rem;
   background-color: white;
   display: flex;
@@ -510,7 +509,7 @@ footer {
     display: initial;
   }
   footer {
-  margin-left: 0;
+  margin-left: 6.56rem;
   }
 }
 
